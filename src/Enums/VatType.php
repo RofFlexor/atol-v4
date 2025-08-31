@@ -74,7 +74,7 @@ enum VatType: string
     case VAT107 = 'vat107';
 
 
-    public function fromValue(int $value): VatType
+    public static function fromValue(int $value): VatType
     {
         return match ($value) {
             6 => self::NONE,
