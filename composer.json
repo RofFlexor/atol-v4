@@ -30,9 +30,7 @@
     "require": {
         "php": ">=8.1",
         "ext-json": "*",
-        "ext-mbstring": "*",
-        "illuminate/collections": "^v9.43.0",
-        "jetbrains/phpstorm-attributes": "^1.0"
+        "ext-mbstring": "*"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.13",
