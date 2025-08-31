@@ -22,9 +22,8 @@
     "readme": "https://github.com/RofFlexor/atol-v4/blob/master/README.md",
     "authors": [
         {
-            "name": "Anthony Axenov",
-            "homepage": "https://axenov.dev",
-            "email": "anthonyaxenov@gmail.com"
+            "name": "Rudolf Medvedev",
+            "email": "rof@andia.ru"
         }
     ],
     "require": {

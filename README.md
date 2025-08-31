@@ -1,5 +1,10 @@
 # АТОЛ Онлайн
 
+## Основано на axenov/atol-online от Anthony Axenov
+
+Данная библиотека является форком/модификацией [оригинальной библиотеки](github.com/anthonyaxenov/atol-online),
+распространяемой под лицензией MIT.
+
 Библиотека для фискализации чеков по 54-ФЗ через [облачные ККТ АТОЛ](https://online.atol.ru/).
 
 [![GitHub Workflow Status (master)](https://img.shields.io/github/workflow/status/anthonyaxenov/atol-online/CI/master?logo=github)](https://github.com/anthonyaxenov/atol-online/actions/workflows/ci.yml)
