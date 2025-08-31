@@ -1,0 +1,8 @@
+/.idea
+/vendor
+/atol_log
+*.log
+/config.php
+*cache*
+/test.php
+/.coverage-report
