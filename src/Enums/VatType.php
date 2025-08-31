@@ -56,4 +56,38 @@ enum VatType: string
      * НДС 20/120%
      */
     case VAT120 = 'vat120';
+    /**
+     * НДС 7%
+     */
+    case VAT7 = 'vat7';
+    /**
+     * НДС 5%
+     */
+    case VAT5 = 'vat5';
+    /**
+     * НДС 5/105%
+     */
+    case VAT105 = 'vat105';
+    /**
+     * НДС 7/107%
+     */
+    case VAT107 = 'vat107';
+
+
+    public function fromValue(int $value): VatType
+    {
+        return match ($value) {
+            6 => self::NONE,
+            5 => self::VAT0,
+            2 => self::VAT10,
+            1 => self::VAT20,
+            4 => self::VAT110,
+            3 => self::VAT120,
+            8 => self::VAT7,
+            7 => self::VAT5,
+            9 => self::VAT105,
+            10 => self::VAT107,
+        };
+
+    }
 }
