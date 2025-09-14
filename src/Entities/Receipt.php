@@ -102,6 +102,74 @@ final class Receipt extends Entity
     protected ?AdditionalUserProps $add_user_props = null;
 
     /**
+     * @var array
+     */
+    protected array $cashless_payments = [];
+
+    /**
+     * @return array
+     */
+    public function getCashlessPayments(): array
+    {
+        return $this->cashless_payments;
+    }
+
+    /**
+     * @param array $cashless_payments
+     * @return void
+     */
+    public function setCashlessPayments(array $cashless_payments): void
+    {
+        $this->cashless_payments = $cashless_payments;
+    }
+
+    /**
+     * Признак расчетов в интернете
+     * @var bool
+     */
+    protected bool $internet = false;
+
+    /**
+     * Часовая зона
+     * @var int
+     */
+    protected int $timezone = 3;
+
+    /**
+     * @return bool
+     */
+    public function isInternet(): bool
+    {
+        return $this->internet;
+    }
+
+    /**
+     * @param bool $internet
+     * @return void
+     */
+    public function setInternet(bool $internet): void
+    {
+        $this->internet = $internet;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTimezone(): int
+    {
+        return $this->timezone;
+    }
+
+    /**
+     * @param int $timezone
+     * @return void
+     */
+    public function setTimezone(int $timezone): void
+    {
+        $this->timezone = $timezone;
+    }
+
+    /**
      * Конструктор
      *
      * @param Client $client
@@ -476,6 +544,8 @@ final class Receipt extends Entity
         !is_null($this->getCashier()) && $json['cashier'] = $this->getCashier();
         $this->getAddUserProps()?->jsonSerialize() &&
         $json['additional_user_props'] = $this->getAddUserProps()->jsonSerialize();
+        $json['internet'] = $this->isInternet();
+        $json['timezone'] = $this->getTimezone();
         return $json;
     }
 }
