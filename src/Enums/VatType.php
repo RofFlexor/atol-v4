@@ -72,6 +72,15 @@ enum VatType: string
      * НДС 7/107%
      */
     case VAT107 = 'vat107';
+    /**
+     * НДС 22/122%
+     */
+    case VAT12 = 'vat122';
+
+    /**
+     * НДС 22%
+     */
+    case VAT22 = 'vat22';
 
 
     public static function fromValue(int $value): VatType
