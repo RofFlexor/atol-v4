@@ -144,7 +144,7 @@ final class Constraints
     /**
      * Максимальная сумма одной оплаты
      */
-    public const MAX_COUNT_PAYMENT_SUM = 99999.999;
+    public const MAX_COUNT_PAYMENT_SUM = 42949672.95;
 
     /**
      * Максимальная длина имени кассира (1021)
